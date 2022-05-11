@@ -1,0 +1,113 @@
+:root {
+  --primary-color: #bf8641;
+  --secondary-color: #dfebf2;
+  --bg-light: #262624;
+  --bg-dark: #0d0d0d;
+}
+
+* {
+  font-family: transducer, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Start Universal Styles */
+
+h1,
+h2 {
+  color: var(--primary-color);
+}
+
+h1 {
+  font-size: 55px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+.dark {
+  background-color: var(--bg-dark);
+}
+
+.light {
+  background-color: var(--bg-light);
+}
+/* End Universal Styles */
+
+/* Start Header Styles */
+header {
+  display: flex;
+  height: 100px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--bg-light);
+}
+
+header img {
+  height: 50px;
+  padding-left: 50px;
+}
+
+nav ul li {
+  display: inline;
+  padding-right: 55px;
+  font-size: 1.5vw;
+}
+
+nav ul li a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+/* End Header Styles */
+
+section {
+  display: flex;
+  padding: 0 50px;
+}
+
+/* Start Intro Styles */
+.intro {
+  color: var(--secondary-color);
+  height: 550px;
+  align-items: center;
+}
+
+.intro-list {
+  flex: 2 70%;
+  padding-right: 50px;
+}
+
+.intro ul li {
+  list-style: none;
+  font-size: 24px;
+  padding-top: 35px;
+  border-bottom: 3px solid var(--primary-color);
+  width: 75%;
+}
+
+.intro h2 {
+  line-height: 0.1;
+}
+
+.intro h3 {
+  font-style: italic;
+  font-weight: lighter;
+}
+/* End Intro Styles */
+
+/* Start Portfolio Styles */
+.portfolio {
+  flex-wrap: wrap;
+  color: var(--secondary-color);
+}
+
+.project {
+  display: flex;
+}
+
+.description {
+  flex: 2 30%;
+}
+/* LAST EDIT HERE, FIGURING OUT FLEX */
