@@ -1,7 +1,7 @@
 :root {
   --primary-color: #bf8641;
   --secondary-color: #dfebf2;
-  --bg-light: #262624;
+  --bg-light: hsl(60, 10%, 6%);
   --bg-dark: #0d0d0d;
 }
 
@@ -73,7 +73,7 @@ section {
 /* Start Intro Styles */
 .intro {
   color: var(--secondary-color);
-  height: 550px;
+  min-height: 550px;
   align-items: center;
 }
 
@@ -130,6 +130,62 @@ section {
 /* End Portfolio Styles */
 
 /* Start Contact Styles */
+.contact {
+  height: 300px;
+  margin: 50px auto 100px auto;
+  display: flex;
+}
+
+.contact h2 {
+  margin-bottom: 35px;
+}
+
+.contact-form {
+  flex: 2;
+}
+
+.contact-form form > * {
+  display: block;
+}
+
+.contact-form input {
+  width: 55%;
+  border: none;
+  border-bottom: 1px solid var(--bg-dark);
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: var(--bg-light);
+}
+
+.contact-form input:focus {
+  outline: none;
+  border-bottom: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.contact-form label {
+  visibility: hidden;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.social img {
+  height: 50px;
+  padding-right: 10px;
+}
+
+.contact-link {
+  text-decoration: none;
+  color: var(--bg-dark);
+}
+
+.contact-link:hover {
+  color: var(--primary-color);
+}
 
 /* End Contact Styles */
 

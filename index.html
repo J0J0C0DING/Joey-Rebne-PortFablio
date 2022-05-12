@@ -24,12 +24,12 @@
       </nav>
     </div>
   </header>
-  <section class="intro dark">
+  <section id="about" class="intro dark">
     <div class="intro-list">
       <ul>
-        <li id="about">{01] About Me</li>
-        <li id="portfolio">{02] Skills</li>
-        <li id="contact">{03] Resume</li>
+        <li>{01] About Me</li>
+        <li>{02] Skills</li>
+        <li>{03] Resume</li>
       </ul>
     </div>
     <div>
@@ -86,47 +86,61 @@
       </div> 
     </div>  
   </section>
-  <section class="contact">
+  <section id="contact" class="contact">
     <div class="contact-form">
-      <h2>Lets: <br /> Get In Touch;</h2>
+      <h2>Lets: Get In Touch</h2>
       <form>
         <label for="name">Name</label>
-        <input type="text" id="name" name="name">
+        <input type="text" id="name" name="name" placeholder="Name">
         
         <label for="email">Email</label>
-        <input type="email" id="email" name="email">
+        <input type="email" id="email" name="email" placeholder="Email">
 
         <label for="message">Message</label>
-        <input type="text" id="message" name="message">
+        <input type="text" id="message" name="message" placeholder="Message">
       </form>
     </div>
     <div class="contact-social">
       <h2>Find Me Here</h2>
-      <div class="social">
-        <img src="#" alt="#">
-        <p>@username</p>
-      </div>
-      <div class="social">
-        <img src="#" alt="#">
-        <p>@username</p>
-      </div>
-      <div class="social">
-        <img src="#" alt="#">
-        <p>@username</p>
-      </div>
-      <div class="social">
-        <img src="#" alt="#">
-        <p>@username</p>
-      </div>
+      <a class="contact-link" href="https://github.com/J0J0C0DING/">
+        <div class="social">
+          <img src="assets/images/social-media/github-dark.svg" alt="Github profile link"> 
+          <p>/J0J0C0DING</p>
+        </div>
+      </a>
+      <a class="contact-link" href="https://www.behance.net/joeyrebne">
+        <div class="social">
+          <img src="assets/images/social-media/behance-dark.svg" alt="Behance profile link">
+          <p>/joeyrebne</p>
+        </div>
+      </a>
+      <a class="contact-link" href="https://www.linkedin.com/in/joeyrebne/">
+        <div class="social">
+          <img src="assets/images/social-media/linkedin-dark.svg" alt="LinkedIn profile link">
+          <p>@jrebnedesign</p>
+        </div>
+      </a>
+      <a class="contact-link" href="https://www.instagram.com/jrebnedesign">  
+        <div class="social">
+          <img src="assets/images/social-media/instagram-dark.svg" alt="Instagram profile link">
+          <p>@jrebnedesign</p>
+        </div>
+      </a>
     </div>
   </section>
   <footer>
     <img src="./assets/images/logos/mono-logo-white.svg" alt="J R Monogram" height="35px">
     <p>Copyright 2022 Joseph Rebne</p>
     <div>
-      <img src="assets/images/social-media/github-light.svg" alt="behance">
-      <img src="assets/images/social-media/linkedin-light.svg" alt="linkedin">
-      <img src="assets/images/social-media/behance-light.svg" alt="behance">
+      <a href="https://github.com/J0J0C0DING/">
+        <img src="assets/images/social-media/github-light.svg" alt="GitHub">
+      </a>
+      <a href="https://www.linkedin.com/in/joeyrebne/"">
+        <img src="assets/images/social-media/linkedin-light.svg" alt="linkedin">
+      </a>
+      <a href="https://www.behance.net/joeyrebne">
+        <img src="assets/images/social-media/behance-light.svg" alt="Behance">
+      </a>
     </div>
   </footer>
 </body>
