@@ -9,6 +9,9 @@
   font-family: transducer, sans-serif;
   font-weight: 400;
   font-style: normal;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 /* Start Universal Styles */
@@ -87,10 +90,6 @@ section {
   width: 75%;
 }
 
-.intro h2 {
-  line-height: 0.1;
-}
-
 .intro h3 {
   font-style: italic;
   font-weight: lighter;
@@ -101,13 +100,52 @@ section {
 .portfolio {
   flex-wrap: wrap;
   color: var(--secondary-color);
+  justify-content: space-between;
 }
 
 .project {
   display: flex;
+  width: 45%;
+
+  padding: 25px 0;
 }
 
 .description {
-  flex: 2 30%;
+  flex: 1;
+  padding-right: 25px;
 }
-/* LAST EDIT HERE, FIGURING OUT FLEX */
+
+.preview {
+  flex: 1;
+}
+
+.preview img {
+  width: 100%;
+}
+
+.fill-row {
+  width: 100%;
+  padding-left: 0px;
+}
+/* End Portfolio Styles */
+
+/* Start Contact Styles */
+
+/* End Contact Styles */
+
+/* Footer Styles */
+footer {
+  background-color: var(--bg-light);
+  color: var(--secondary-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 75px;
+  padding: 0 15px;
+}
+
+footer div img {
+  height: 50px;
+  padding: 0 10px;
+}
+/* End Footer Styles */
