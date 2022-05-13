@@ -1,8 +1,11 @@
 :root {
-  --primary-color: #bf8641;
+  --primary-color: #9080f2;
+  --accent-color: #5645c4cc;
   --secondary-color: #dfebf2;
-  --bg-light: hsl(60, 10%, 6%);
+  --bg-light: #0d0d0d;
   --bg-dark: #0d0d0d;
+  --gradient-bg: linear-gradient(90deg, rgba(144, 128, 242, 1) 0%, rgba(81, 53, 250, 1) 40%, rgba(40, 5, 255, 1) 100%), var(--bg-light);
+  --gradient-reverse-bg: linear-gradient(270deg, rgba(144, 128, 242, 1) 0%, rgba(81, 53, 250, 1) 40%, rgba(40, 5, 255, 1) 100%), var(--bg-light);
 }
 
 * {
@@ -12,6 +15,10 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+body {
+  background-color: #f2f2f2;
 }
 
 /* Start Universal Styles */
@@ -44,7 +51,8 @@ header {
   height: 100px;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--bg-light);
+  background: rgb(144, 128, 242);
+  background: linear-gradient(90deg, rgba(144, 128, 242, 1) 0%, rgba(81, 53, 250, 1) 40%, rgba(40, 5, 255, 1) 100%), var(--bg-light);
 }
 
 header img {
@@ -63,11 +71,15 @@ nav ul li a {
   text-decoration: none;
 }
 
+nav ul li a:hover {
+  color: var(--primary-color);
+}
+
 /* End Header Styles */
 
 section {
   display: flex;
-  padding: 0 50px;
+  padding: 0 50px 25px 50px;
 }
 
 /* Start Intro Styles */
@@ -98,6 +110,7 @@ section {
 
 /* Start Portfolio Styles */
 .portfolio {
+  display: flex;
   flex-wrap: wrap;
   color: var(--secondary-color);
   justify-content: space-between;
@@ -105,28 +118,63 @@ section {
 
 .project {
   display: flex;
-  width: 45%;
-
-  padding: 25px 0;
+  width: 49%;
+  margin: 25px 0;
+  height: 300px;
+  overflow: hidden;
 }
 
 .description {
-  flex: 1;
-  padding-right: 25px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
 }
 
-.preview {
-  flex: 1;
+.project :hover {
+  opacity: 1;
 }
 
-.preview img {
+.description img {
   width: 100%;
 }
 
-.fill-row {
-  width: 100%;
-  padding-left: 0px;
+.description h2 {
+  position: absolute;
+  z-index: 9999;
+  bottom: 25px;
+  left: 25px;
+  background: var(--bg-light);
+  width: auto;
+  padding: 1% 2%;
 }
+
+.description h2:hover {
+  background: var(--gradient-bg);
+  color: var(--secondary-color);
+}
+
+.description a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.description a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+.cover {
+  flex: 1 100%;
+  height: 400px;
+}
+
+.center {
+  height: auto;
+  justify-content: center;
+  width: 100%;
+}
+
 /* End Portfolio Styles */
 
 /* Start Contact Styles */
@@ -134,14 +182,23 @@ section {
   height: 300px;
   margin: 50px auto 100px auto;
   display: flex;
+  justify-content: space-between;
 }
 
 .contact h2 {
   margin-bottom: 35px;
 }
 
+.contact-social svg:hover {
+  fill: var(--primary-color);
+}
+
 .contact-form {
   flex: 2;
+}
+
+form {
+  width: 50%;
 }
 
 .contact-form form > * {
@@ -149,22 +206,35 @@ section {
 }
 
 .contact-form input {
-  width: 55%;
+  width: 100%;
   border: none;
-  border-bottom: 1px solid var(--bg-dark);
+  border-bottom: 1.5px solid var(--bg-dark);
   margin-bottom: 20px;
   font-size: 24px;
   color: var(--bg-light);
+  background-color: #f2f2f2;
 }
 
 .contact-form input:focus {
   outline: none;
-  border-bottom: 1px solid var(--primary-color);
+  border-bottom: 3px solid var(--primary-color);
   color: var(--primary-color);
 }
 
 .contact-form label {
   visibility: hidden;
+}
+
+.contact-form button {
+  padding: 10px;
+  font-size: 18px;
+  margin: 15px auto 0 auto;
+  color: var(--secondary-color);
+  background: var(--primary-color);
+}
+
+.contact-form button:hover {
+  background: var(--gradient-bg);
 }
 
 .social {
@@ -173,9 +243,8 @@ section {
   margin-bottom: 15px;
 }
 
-.social img {
-  height: 50px;
-  padding-right: 10px;
+.social p {
+  padding-left: 10px;
 }
 
 .contact-link {
@@ -187,11 +256,54 @@ section {
   color: var(--primary-color);
 }
 
+/* ICONS */
+.icon {
+  height: 50px;
+  width: 50px;
+  background-size: cover;
+}
+
+.icon-github {
+  background-image: url(/assets/images/social-media/github-dark.svg);
+}
+
+.icon-github:hover {
+  background-image: url(/assets/images/social-media/github-color.svg);
+}
+
+.icon-behance {
+  background-image: url(/assets/images/social-media/behance-dark.svg);
+  fill: var(--bg-dark);
+}
+
+.icon-behance:hover {
+  background-image: url(/assets/images/social-media/behance-color.svg);
+}
+.icon-linkedin {
+  background-image: url(/assets/images/social-media/linkedin-dark.svg);
+  fill: var(--bg-dark);
+}
+
+.icon-linkedin:hover {
+  background-image: url(/assets/images/social-media/linkedin-color.svg);
+}
+
+.icon-instagram {
+  background-image: url(/assets/images/social-media/instagram-dark.svg);
+  fill: var(--bg-dark);
+}
+
+.icon-instagram:hover {
+  background-image: url(/assets/images/social-media/instagram-color.svg);
+}
+
+/* ICONS */
+
 /* End Contact Styles */
 
 /* Footer Styles */
 footer {
-  background-color: var(--bg-light);
+  background: var(--gradient-reverse-bg);
   color: var(--secondary-color);
   display: flex;
   justify-content: space-between;
@@ -205,3 +317,5 @@ footer div img {
   padding: 0 10px;
 }
 /* End Footer Styles */
+
+/* NEED TO ADD MORE TO INTRO | HOVER TO SHOW 02 03 CONTENT */
