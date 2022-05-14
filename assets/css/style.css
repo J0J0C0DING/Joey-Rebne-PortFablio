@@ -283,6 +283,7 @@ form {
 
 .contact-form button {
   padding: 10px;
+  width: 100%;
   font-size: 18px;
   margin: 15px auto 0 auto;
   border: none;
@@ -321,37 +322,37 @@ form {
 }
 
 .icon-github {
-  background-image: url(../images/social-media/github-dark.svg);
+  background-image: url("../images/social-media/github-dark.svg");
 }
 
 .icon-github:hover {
-  background-image: url(../images/social-media/github-color.svg);
+  background-image: url("../images/social-media/github-color.svg");
 }
 
 .icon-behance {
-  background-image: url(..//images/social-media/behance-dark.svg);
+  background-image: url("..//images/social-media/behance-dark.svg");
   fill: var(--bg-dark);
 }
 
 .icon-behance:hover {
-  background-image: url(../images/social-media/behance-color.svg);
+  background-image: url("../images/social-media/behance-color.svg");
 }
 .icon-linkedin {
-  background-image: url(../images/social-media/linkedin-dark.svg);
+  background-image: url("../images/social-media/linkedin-dark.svg");
   fill: var(--bg-dark);
 }
 
 .icon-linkedin:hover {
-  background-image: url(../images/social-media/linkedin-color.svg);
+  background-image: url("../images/social-media/linkedin-color.svg");
 }
 
 .icon-instagram {
-  background-image: url(../images/social-media/instagram-dark.svg);
+  background-image: url("../images/social-media/instagram-dark.svg");
   fill: var(--bg-dark);
 }
 
 .icon-instagram:hover {
-  background-image: url(../images/social-media/instagram-color.svg);
+  background-image: url("../images/social-media/instagram-color.svg");
 }
 /***** End ICON Styles *****/
 
