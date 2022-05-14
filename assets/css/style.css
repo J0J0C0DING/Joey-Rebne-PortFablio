@@ -63,7 +63,7 @@ header img {
 nav ul li {
   display: inline;
   padding-right: 55px;
-  font-size: 1.5vw;
+  font-size: 2vw;
 }
 
 nav ul li a {
@@ -78,7 +78,7 @@ nav ul li a:hover {
 /***** End Header Styles *****/
 
 section {
-  padding: 0 50px 25px 50px;
+  padding: 50 0px;
 }
 
 /***** Start Intro Styles *****/
@@ -86,8 +86,7 @@ section {
   display: flex;
   color: var(--secondary-color);
   flex-wrap: wrap;
-  padding-bottom: 25px;
-  padding-top: 25px;
+  padding: 25px 0px 25px 25px;
 }
 
 .profile-picture {
@@ -118,6 +117,8 @@ section {
 
 .intro-list h2 {
   color: var(--secondary-color);
+  border-bottom: 3px solid var(--primary-color);
+  width: fit-content;
 }
 
 .intro-list h2:not(:last-child) {
@@ -235,10 +236,11 @@ section {
 
 /***** Start Contact Styles *****/
 .contact {
-  height: 300px;
-  margin: 50px auto 100px auto;
+  height: auto;
+  margin: 100px auto;
   display: flex;
   justify-content: space-between;
+  padding: 0 25px;
 }
 
 .contact h2 {
@@ -253,11 +255,8 @@ section {
   flex: 2;
 }
 
-form {
-  width: 50%;
-}
-
 .contact-form form {
+  width: 75%;
   display: block;
 }
 
@@ -374,3 +373,134 @@ footer div img {
   padding: 0 10px;
 }
 /***** End Footer Styles *****/
+
+/***** Start Media Queries *****/
+
+/* TABLETS AND SMALLER */
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 32px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+
+  .intro-list {
+    text-align: center;
+  }
+
+  .intro-list h2 {
+    width: 75%;
+    border-width: 1px;
+    padding-bottom: 5px;
+  }
+
+  .profile-picture img {
+    width: 200px;
+  }
+
+  #about-me,
+  #skills,
+  #resume {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .intro-aboutMe,
+  .intro-skills,
+  .intro-resume {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    text-align: left;
+    width: 85%;
+    left: 0;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .skill-list {
+    flex: 1 45%;
+  }
+
+  .contact-form input {
+    font-size: 18px;
+  }
+}
+
+/****
+* MOBILE PHONES AND SMALLER *****/
+@media screen and (max-width: 575px) {
+  header {
+    display: block;
+    height: auto;
+    text-align: center;
+    padding: 10px;
+  }
+
+  header img {
+    height: 35px;
+    padding: 0;
+  }
+
+  nav ul {
+    margin: 10px 0;
+  }
+
+  nav ul li {
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  .intro-skills {
+    display: block;
+    text-align: center;
+  }
+
+  /* Contact Section */
+  .contact {
+    display: block;
+    height: auto;
+    text-align: center;
+    margin: 20px auto;
+  }
+
+  .contact-form form {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  .contact-social {
+    display: flex;
+    align-items: center;
+  }
+
+  .contact-social div:not(:last-child) {
+    margin-right: 25px;
+  }
+
+  .icon {
+    height: 25px;
+    width: 25px;
+  }
+  /***** End Contact Section *****/
+
+  footer {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    height: auto;
+    justify-content: center;
+    background: var(--primary-color);
+  }
+
+  footer div {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  footer div img {
+    height: 30px;
+  }
+}
