@@ -357,7 +357,7 @@ form {
 
 /***** End Contact Styles *****/
 
-/* Footer Styles */
+/***** Footer Styles *****/
 footer {
   background: var(--gradient-reverse-bg);
   color: var(--secondary-color);
@@ -372,6 +372,4 @@ footer div img {
   height: 50px;
   padding: 0 10px;
 }
-/* End Footer Styles */
-
-/* NEED TO ADD MORE TO INTRO | HOVER TO SHOW 02 03 CONTENT */
+/***** End Footer Styles *****/
