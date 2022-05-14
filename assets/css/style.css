@@ -86,43 +86,63 @@ section {
 .intro {
   display: flex;
   color: var(--secondary-color);
-  min-height: 550px;
-  align-items: center;
+  flex-wrap: wrap;
+  padding-bottom: auto;
+  padding-top: 25px;
 }
 
-.intro-aboutMe h3 {
+.profile-picture {
+  width: 100%;
+  text-align: center;
+}
+
+.profile-picture img {
+  width: 250px;
+  margin: 0 auto;
+}
+
+.intro-list h3 {
   margin-bottom: 10px;
-  padding: 0 10px 0 3px;
+  font-size: 20px;
+  padding: 5px;
   background-color: #9080f2;
   width: fit-content;
+  color: var(--secondary-color);
 }
 
 .intro-list {
-  padding-right: 50px;
+  display: block;
   margin-top: 50px;
-  width: 60%;
+  position: relative;
+  width: 100%;
 }
 
-.intro ul li:not(:first-child) {
-  font-size: 24px;
-  padding-top: 35px;
-  border-bottom: 3px solid var(--primary-color);
+.intro-list h2:not(:last-child) {
+  margin-bottom: 25px;
 }
 
-.intro-list li img {
-  width: 75%;
-  max-height: 300px;
-  max-width: 265px;
+.intro-aboutMe,
+.intro-skills {
+  display: none;
+  position: absolute;
+  width: 50%;
+  top: 0;
+  right: 15%;
 }
 
-.intro ul li {
-  list-style: none;
-  /* width: 75%; */
+#about-me:hover .intro-aboutMe,
+#skills:hover .intro-skills {
+  display: inherit;
 }
 
-.intro h3 {
-  font-style: italic;
-  font-weight: lighter;
+.skill-list {
+  margin-bottom: 25px;
+}
+
+.intro-skills [data$="svg"] {
+  height: 50px;
+  width: 50px;
+  margin: 0 5px;
 }
 
 /* End Intro Styles */
